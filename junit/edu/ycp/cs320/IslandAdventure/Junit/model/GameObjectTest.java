@@ -1,5 +1,15 @@
 package edu.ycp.cs320.IslandAdventure.Junit.model;
 
+/* These are the jUnit tests for the GameObject Class.
+ * Created originally by Nolan Hamilton.
+ *  
+ * 
+ * 
+ * Changes:
+ * 3/4/18 - Nolan-Hamilton: Initial creation of class.
+ * 3/5/18 - Nolan-Hamilton: Comments added.
+ * */
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;

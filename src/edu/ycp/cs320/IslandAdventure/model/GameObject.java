@@ -1,19 +1,29 @@
 package edu.ycp.cs320.IslandAdventure.model;
 
+/* This is the class that will serve as the superclass for all objects in the Island Adventure game.
+ * All other object classes will inherit from this class. 
+ * Created originally by Nolan Hamilton. 
+ * 
+ * 
+ * Changes:
+ * 3/4/18 - Nolan-Hamilton: Initial creation of class.
+ * 3/5/18 - Nolan-Hamilton: Comments added.
+ * */
+
 public class GameObject {
 	
 	// Fields
-	private String name;
-	private String description;
-	private Integer x, y, z;
+	private String name; 			// Name which object is refered to.
+	private String description;		// Description of Object for user.
+	private Integer x, y, z;		// Coordinates for Location
 	
 	// Constructors
-	public GameObject() {
+	public GameObject() {			// Empty Constructor
 		
 	}
 	
 	public GameObject(String name, String description, Integer x, Integer y, Integer z){
-		this.name = name;
+		this.name = name;			// Complete Constructor
 		this.description = description;
 		this.x = x;
 		this.y = y;
