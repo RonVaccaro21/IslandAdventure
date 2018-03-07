@@ -3,7 +3,7 @@ package edu.ycp.cs320.IslandAdventure.model;
 public class Map {
 
 	private Location[] map;
-	
+	//make a triple array here 
 	public Map()
 	{
 		map = new Location[10];//will only allow for 10 players
