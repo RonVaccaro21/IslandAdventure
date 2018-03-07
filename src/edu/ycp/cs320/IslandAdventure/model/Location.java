@@ -13,7 +13,7 @@ public class Location {
 		x = a;
 		y = b;
 		z = c;
-		possibleMove = true;
+		possibleMove = true; //move these to a move class 
 		visable = false;
 	}
 
