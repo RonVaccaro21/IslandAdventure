@@ -1,0 +1,38 @@
+body 
+{
+    background-color: lightblue;
+}
+
+#titleText {
+	border-top: 2px solid darkblue;
+	border-bottom: 2px solid darkblue;
+	text-align: center;
+	color: red;
+	font-variant: small-caps;
+	margin-bottom: 20px;
+}
+
+#outputBox {
+	width: 480px;
+	height: 480px;
+	border:2px solid darkblue;
+	float:left;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
+}
+
+#variablesBox {
+	width: 480px;
+	height: 480px;
+	border:2px solid darkblue;
+	float:left;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
+}
+#inputBox {
+	width: 480px;
+	border:2px solid darkblue;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
+}x;
+}
