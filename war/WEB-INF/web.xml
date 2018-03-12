@@ -11,11 +11,21 @@
     <servlet-class>edu.ycp.cs320.IslandAdventure.servlet.IndexServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name><!-- Login Servlet -->
+    <servlet-class>edu.ycp.cs320.IslandAdventure.servlet.LoginServlet</servlet-class>
+  </servlet>
+
 
   <!-- Servlet mappings -->
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
     <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name><!-- Login Page -->
+    <url-pattern>/login</url-pattern>
   </servlet-mapping>
   
 
