@@ -16,6 +16,10 @@
     <servlet-class>edu.ycp.cs320.IslandAdventure.servlet.LoginServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>NewAccountServlet</servlet-name><!-- New Account Servlet -->
+    <servlet-class>edu.ycp.cs320.IslandAdventure.servlet.NewAccountServlet</servlet-class>
+  </servlet>
 
   <!-- Servlet mappings -->
   <servlet-mapping>
@@ -26,6 +30,11 @@
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name><!-- Login Page -->
     <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>NewAccountServlet</servlet-name><!-- New Account Page -->
+    <url-pattern>/newAccount</url-pattern>
   </servlet-mapping>
   
 
