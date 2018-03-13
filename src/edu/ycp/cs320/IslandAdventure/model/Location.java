@@ -1,23 +1,84 @@
 package edu.ycp.cs320.IslandAdventure.model;
 
+
 public class Location {
 	
 	private int x;
 	private int y;
 	private int z;
-	private boolean visable;
-	private boolean possibleMove;
+
 	
 	public Location(int a, int b, int c)
 	{
 		x = a;
 		y = b;
 		z = c;
-		possibleMove = true; //move these to a move class 
-		visable = false;
 	}
-
-	public void setPossibleMove(boolean pos)
+	
+	public int getX()
+	{
+		return x;
+	}
+	
+	public int getY()
+	{
+		return y;
+	}
+	
+	public int getZ()
+	{
+		return z;
+	}
+	public void setX(int a)
+	{
+		this.x = a;
+	}
+	
+	public void setY(int b)
+	{
+		this.y = b;
+	}
+	
+	public void setZ(int c)
+	{
+		this.z = c;
+	}
+	public void setLocation(int a, int b, int c)
+	{
+		this.x = a;
+		this.y = b;
+		this.z = c;
+	}
+	
+	public void setLocation(Location loc)
+	{
+		this.setX(loc.getX());
+		this.setY(loc.getY());
+		this.setZ(loc.getZ());
+	}
+	
+	public boolean equals(Location loc)
+	{
+		if(this.getX() == loc.getX() && this.getY() == loc.getY() && this.getZ() == loc.getZ())
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	
+	
+	/*
+	 * put this in a move class for player
+	 * 
+	private boolean visable;
+	private boolean possibleMove;
+	 * 
+	 * 	possibleMove = true; //move these to a move class 
+		visable = false;
+		
+		
+			public void setPossibleMove(boolean pos)
 	{
 		this.possibleMove = pos;
 	}
@@ -37,52 +98,22 @@ public class Location {
 		return visable;
 	}
 	
-	public int getX()
+		public void testPossibleMoves()
 	{
-		return x;
+		assertTrue(loc.getPossibleMove());
+		loc.setPossibleMove(false);
+		assertFalse(loc.getPossibleMove());
 	}
-	
-	public int getY()
+
+	public void testVisable()
 	{
-		return y;
+		assertFalse(loc.getVisable());
+		loc.setVisable(true);
+		assertTrue(loc.getVisable());
 	}
-	
-	public int getZ()
-	{
-		return z;
-	}
-	
-	public void setLocation(int a, int b, int c)
-	{
-		x = a;
-		y = b;
-		z = c;
-	}
-	
-	public void setLocation(Location loc)
-	{
-		x = loc.getX();
-		y = loc.getY();
-		z = loc.getZ();
-	}
-	
-	public void setX(int a)
-	{
-		x = a;
-	}
-	
-	public void setY(int b)
-	{
-		y = b;
-	}
-	
-	public void setZ(int c)
-	{
-		z = c;
-	}
-	
-	
-	
+
+		
+	 */
 	
 	
 	
