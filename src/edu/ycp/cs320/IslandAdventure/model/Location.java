@@ -1,6 +1,5 @@
 package edu.ycp.cs320.IslandAdventure.model;
 
-
 public class Location {
 	
 	private int x;
@@ -66,7 +65,7 @@ public class Location {
 		else
 			return false;
 	}
-	
+}
 	
 	/*
 	 * put this in a move class for player
@@ -117,4 +116,4 @@ public class Location {
 	
 	
 	
-}
+
