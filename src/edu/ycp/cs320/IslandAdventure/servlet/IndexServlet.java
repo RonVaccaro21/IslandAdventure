@@ -15,6 +15,8 @@ import edu.ycp.cs320.IslandAdventure.model.Inventory;
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	String action = "";
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -28,7 +30,7 @@ public class IndexServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("AddNumbers Servlet: doPost");
+		System.out.println("Index Servlet: doPost");
 		
 		// create Inventory model - model does not persist between requests
 		// must recreate it each time a Post comes in 
@@ -46,7 +48,7 @@ public class IndexServlet extends HttpServlet {
 		
 		req.setAttribute("action", req.getParameter("action"));
 		
-		String action = req.getParameter("action");
+		action = req.getParameter("action");
 	
 		req.setAttribute("lastAction", action);
 		
@@ -55,5 +57,10 @@ public class IndexServlet extends HttpServlet {
 		
 		// Forward to view to render the result HTML document
 		req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
+	}
+	
+	
+	public String getAction() {
+		return action;
 	}
 }

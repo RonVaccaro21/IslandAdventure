@@ -70,11 +70,11 @@ public class Location {
 	/*
 	 * put this in a move class for player
 	 * 
-	private boolean visable;
+	private boolean visible;
 	private boolean possibleMove;
 	 * 
 	 * 	possibleMove = true; //move these to a move class 
-		visable = false;
+		visible = false;
 		
 		
 			public void setPossibleMove(boolean pos)
@@ -89,12 +89,12 @@ public class Location {
 	
 	public void setVisable(boolean vis)
 	{
-		this.visable = vis;
+		this.visible = vis;
 	}
 
 	public boolean getVisable()
 	{
-		return visable;
+		return visible;
 	}
 	
 		public void testPossibleMoves()
@@ -107,8 +107,8 @@ public class Location {
 	public void testVisable()
 	{
 		assertFalse(loc.getVisable());
-		loc.setVisable(true);
-		assertTrue(loc.getVisable());
+		loc.setVisible(true);
+		assertTrue(loc.getVisible());
 	}
 
 		
