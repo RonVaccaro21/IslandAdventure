@@ -11,6 +11,6 @@ public class Inventory
 	
 	public double getWoodAmount()
 	{
-		return wood;
+		return this.wood;
 	}
 }
