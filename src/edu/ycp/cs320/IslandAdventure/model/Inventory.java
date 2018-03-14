@@ -2,7 +2,11 @@ package edu.ycp.cs320.IslandAdventure.model;
 
 public class Inventory 
 {
-	private double wood = 0;
+	private double wood;
+	
+	public Inventory() {
+		wood = 0.0;
+	}
 	
 	public void setWoodAmount(double wood) 
 	{
@@ -11,6 +15,6 @@ public class Inventory
 	
 	public double getWoodAmount()
 	{
-		return wood;
+		return this.wood;
 	}
 }
