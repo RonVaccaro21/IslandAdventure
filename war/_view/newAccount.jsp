@@ -21,15 +21,19 @@
 		<div id= "inputBox">
 			
 			<form action="${pageContext.servletContext.contextPath}/newAccount" method="post">
-				Username:<input type="text" name="action" size="20" value="${action}" />
+				Username:<input type="text" name="user" size="20" value="${user}" />
 				<br><br>
-				Password:<input type="text" name="action" size="20" value="${action}" />
+				Password:<input type="text" name="pass" size="20" value="${pass}" />
 				<br><br>
-				Confirm Password:<input type="text" name="action" size="20" value="${action}" />
+				Confirm Password:<input type="text" name="pass2" size="20" value="${pass2}" />
 				<br><br>
 				<input type="Submit" name="submit" value="Create Account!">
 			</form>
 		</div>
+		
+		<c:if test="${! empty errorMessage}">
+			<div class="error">${errorMessage}</div>
+		</c:if>
 		
 		<div id= "inputBox">
 			<form action="${pageContext.servletContext.contextPath}/newAccount" method="post">

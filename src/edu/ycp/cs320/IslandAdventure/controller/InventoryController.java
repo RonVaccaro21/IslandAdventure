@@ -7,11 +7,11 @@ public class InventoryController
 {
 	private Inventory model;
 	
-	/*
+	
 	public InventoryController() {
 		this.model = new Inventory();
 	}
-	*/
+	
 	public void setModel(Inventory model) 
 	{
 		this.model = model;
