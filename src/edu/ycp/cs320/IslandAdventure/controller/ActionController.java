@@ -8,7 +8,7 @@ public class ActionController
 	
 	public void interpretAction(String action)
 	{
-		if (action.equals("Chop Wood"))
+		if (action.equals("Chop Wood") || action.equals("chop wood")) 
 		{
 			inventoryController.changeWoodAmount((double) 10.0);
 		}
