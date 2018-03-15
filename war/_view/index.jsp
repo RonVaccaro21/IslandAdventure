@@ -23,7 +23,7 @@
 			Score: <br />
 			Inventory:
 			<ul>
-				<li>Wood: ${inventory.woodAmount}</li>
+				<li>Wood: ${inventory.woodCount}</li>
 				<li>Item 2</li>
 			</ul>
 		</div>

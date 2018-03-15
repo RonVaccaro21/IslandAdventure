@@ -38,13 +38,12 @@ public class IndexServlet extends HttpServlet {
 		Inventory inventoryModel = new Inventory();
 		InventoryController inventoryController = new InventoryController();
 		ActionController controller = new ActionController();
-		
-		inventoryController.createGame();
 
 		
 		// assign model reference to controller so that controller can access model
 		inventoryController.setModel(inventoryModel);
-		
+
+	    
 		// Initialize variables in the Inventory model		
 		req.setAttribute("inventory", inventoryModel);
 		

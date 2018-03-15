@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class Inventory 
 {
-	private Map<Item, Integer> inventory = new HashMap<Item, Integer>();
+	private Map<String, Integer> inventory = new HashMap<String, Integer>();
 	
-	public void addItem(Item item, int amount) 
+	public void addItem(String item, int amount) 
 	{
 	    Integer count = inventory.get(item);
 	    if (count == null) 
@@ -20,8 +20,13 @@ public class Inventory
 	    }
 	}
 	
-	public Integer getItemCount(Item item)
+	public Integer getItemCount(String item)
 	{
 		return inventory.get(item);
+	}
+	
+	public Integer getWoodCount()	// Temporary method for testing
+	{
+		return inventory.get("Wood");
 	}
 }

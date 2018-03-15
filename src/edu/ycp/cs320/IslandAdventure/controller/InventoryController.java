@@ -17,13 +17,13 @@ public class InventoryController
 		this.model = model;
 	}
 	
-	public void createGame()
+/*	public void createGame()
 	{
-		model.setWoodAmount(0.0);
+		model.
 	}
-	
-	public void changeWoodAmount(double amount)
+*/	
+	public void changeWoodAmount(int amount)
 	{
-		model.setWoodAmount(model.getWoodAmount() + amount);
+		model.addItem("Wood", amount);
 	}
 }

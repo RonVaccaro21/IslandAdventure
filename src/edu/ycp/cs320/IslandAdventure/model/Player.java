@@ -45,11 +45,11 @@ public class Player
 		time = time + timeChange;	// Time can be from 0 to 24. Each activity takes a # of hours
 	}
 	
-	public void addItem(Item item, int amount)
+	public void addItem(String item, int amount)
 	{
 		inventory.addItem(item, amount);
 	}
-	public Boolean hasItem(Item item)
+	public Boolean hasItem(String item)
 	{
 		Integer count = inventory.getItemCount(item);
 		if (count != null)
@@ -61,7 +61,7 @@ public class Player
 			return false;
 		}
 	}
-	public int getItemCount(Item item)
+	public int getItemCount(String item)
 	{
 		return inventory.getItemCount(item);
 	}
