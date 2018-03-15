@@ -7,14 +7,21 @@ public class Inventory
 {
 	Map<Item, Integer> inventory = new HashMap<Item, Integer>();
 	
-	public void addItem(Map<Item, Integer> inventory, Item item) 
+	public void addItem(Item item, int amount) 
 	{
-	    Item inMap = inventory.get
-	    if (inMap == null) {
-	        inMap = record;
-	    } else {
-	        inMap.setNumberOfDays(inMap.getNumberOfDays() + record.getNumberOfDays());
+	    Integer count = inventory.get(item);
+	    if (count == null) 
+	    {
+	        count = amount;
+	    } 
+	    else 
+	    {
+	        inventory.put(item, count + amount);
 	    }
-	    map.put(record.getCountryName(), inMap);
+	}
+	
+	public Integer getItemCount(Item item)
+	{
+		return inventory.get(item);
 	}
 }
