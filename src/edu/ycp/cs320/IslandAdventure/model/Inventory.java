@@ -1,16 +1,20 @@
 package edu.ycp.cs320.IslandAdventure.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Inventory 
 {
-	private double wood = 0;
+	Map<Item, Integer> inventory = new HashMap<Item, Integer>();
 	
-	public void setWoodAmount(double wood) 
+	public void addItem(Map<Item, Integer> inventory, Item item) 
 	{
-		this.wood = wood;
-	}
-	
-	public double getWoodAmount()
-	{
-		return wood;
+	    Item inMap = inventory.get
+	    if (inMap == null) {
+	        inMap = record;
+	    } else {
+	        inMap.setNumberOfDays(inMap.getNumberOfDays() + record.getNumberOfDays());
+	    }
+	    map.put(record.getCountryName(), inMap);
 	}
 }
