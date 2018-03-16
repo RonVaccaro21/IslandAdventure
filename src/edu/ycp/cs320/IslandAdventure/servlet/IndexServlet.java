@@ -2,6 +2,8 @@
 package edu.ycp.cs320.IslandAdventure.servlet;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,16 +37,15 @@ public class IndexServlet extends HttpServlet {
 		// create Inventory model - model does not persist between requests
 		// must recreate it each time a Post comes in 
 		String action = "";
-		Inventory inventoryModel = new Inventory();
-		InventoryController inventoryController = new InventoryController();
+		Inventory inventoryModel = new Inventory(null);
+		InventoryController inventoryController = new InventoryController(null);
 		ActionController controller = new ActionController();
-		
-		inventoryController.createGame();
 
 		
 		// assign model reference to controller so that controller can access model
 		inventoryController.setModel(inventoryModel);
-		
+
+	    
 		// Initialize variables in the Inventory model		
 		req.setAttribute("inventory", inventoryModel);
 		

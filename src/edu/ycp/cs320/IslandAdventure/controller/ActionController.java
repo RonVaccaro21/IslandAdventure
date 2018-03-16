@@ -1,16 +1,19 @@
 package edu.ycp.cs320.IslandAdventure.controller;
 
-import edu.ycp.cs320.IslandAdventure.model.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ActionController 
 {
-	InventoryController inventoryController = new InventoryController();
+	private Map<String, Integer> inventory = new HashMap<String, Integer>();
+	
+	InventoryController inventoryController = new InventoryController(inventory);
 	
 	public void interpretAction(String action)
 	{
 		if (action.equals("Chop Wood") || action.equals("chop wood")) 
 		{
-			inventoryController.changeWoodAmount((double) 10.0);
+			inventoryController.changeWoodAmount(10);
 		}
 	}
 }

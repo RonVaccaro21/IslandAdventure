@@ -54,7 +54,7 @@ public class NewAccountServlet extends HttpServlet {
 				//System.out.println("Sucess!");
 				account.setUsername(user);
 				account.setPassword(pass);
-				Player player = new Player();
+				Player player = new Player(0, 0, 0, 0, null, null);
 				Location[][][] map = new Location[25][25][25];
 				account.setPlayer(player);
 				account.setMap(map);

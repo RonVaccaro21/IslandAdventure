@@ -11,7 +11,7 @@ public class Location {
 	{
 		x = a;
 		y = b;
-		z = c;;
+		z = c;
 	}
 	
 	public int getX()
