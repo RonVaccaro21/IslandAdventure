@@ -7,7 +7,7 @@ public class ActionController
 {
 	private Map<String, Integer> inventory = new HashMap<String, Integer>();
 	
-	InventoryController inventoryController = new InventoryController(inventory);
+	private InventoryController inventoryController = new InventoryController(inventory);
 	
 	public void interpretAction(String action)
 	{
