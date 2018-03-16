@@ -7,12 +7,17 @@ public class Inventory
 {
 	private Map<String, Integer> inventory = new HashMap<String, Integer>();
 	
+	public Inventory(Map<String, Integer> inventory)
+	{
+		this.inventory = inventory;
+	}
+	
 	public void addItem(String item, int amount) 
 	{
 	    Integer count = inventory.get(item);
 	    if (count == null) 
 	    {
-	        count = amount;
+	        inventory.put(item, amount);
 	    } 
 	    else 
 	    {

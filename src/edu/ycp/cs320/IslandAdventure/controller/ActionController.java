@@ -1,8 +1,13 @@
 package edu.ycp.cs320.IslandAdventure.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ActionController 
 {
-	InventoryController inventoryController = new InventoryController();
+	private Map<String, Integer> inventory = new HashMap<String, Integer>();
+	
+	InventoryController inventoryController = new InventoryController(inventory);
 	
 	public void interpretAction(String action)
 	{

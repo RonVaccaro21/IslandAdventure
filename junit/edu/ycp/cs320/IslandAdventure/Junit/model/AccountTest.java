@@ -13,10 +13,13 @@ public class AccountTest {
 	private Account account;
 	private Player	player;
 	private Location[][][] map;
+	private Location location;
+	private Inventory inventory;
 	
 	@Before
 	public void setUp(){
-		player = new Player();
+		location = new Location(10,10,10);
+		player = new Player(0, 0, 0, 0, inventory, location);
 		map = new Location[25][25][25];
 		account = new Account("MyName", "SomePassword", player, map);
 	}
@@ -54,7 +57,7 @@ public class AccountTest {
 	
 	@Test
 	public void testSetPlayer() {
-		Player player2 = new Player();
+		Player player2 = new Player(0, 0, 0, 0, inventory, location);
 		account.setPlayer(player2);
 		assertTrue(account.getPlayer().equals(player2));
 		assertTrue(account.getPlayer() == player2);

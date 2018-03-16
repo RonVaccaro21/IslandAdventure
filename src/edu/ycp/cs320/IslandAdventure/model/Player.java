@@ -9,6 +9,16 @@ public class Player
 	private Inventory inventory;
 	private Location location;
 	
+	public Player(int score, int health, int stamina, int time, Inventory inventory, Location location)
+	{
+		this.score = score;
+		this.health = health;
+		this.stamina = stamina;
+		this.time = time;
+		this.inventory = inventory;
+		this.location = location;
+	}
+	
 	public int getScore()
 	{
 		return score;
@@ -45,16 +55,19 @@ public class Player
 		time = time + timeChange;	// Time can be from 0 to 24. Each activity takes a # of hours
 	}
 	
-	public void addItem(String item, int amount)
-	{
-		inventory.addItem(item, amount);
-	}
 	public Boolean hasItem(String item)
 	{
 		Integer count = inventory.getItemCount(item);
 		if (count != null)
 		{
-			return true;
+			if (count > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		else
 		{
@@ -64,5 +77,14 @@ public class Player
 	public int getItemCount(String item)
 	{
 		return inventory.getItemCount(item);
+	}
+	
+	public Location getLocation()
+	{
+		return location;
+	}
+	public void changeLocation(Location location)
+	{
+		this.location = location;
 	}
 }
