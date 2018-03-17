@@ -51,10 +51,10 @@ public class NewAccountServlet extends HttpServlet {
 			//System.out.println("pass: " + pass.equals(pass2));
 			
 			if (!(user.equals("")) && !(pass.equals("")) && !(pass2.equals("")) && (pass.equals(pass2))) {
-				//System.out.println("Sucess!");
+				//System.out.println("Success!");
 				account.setUsername(user);
 				account.setPassword(pass);
-				Player player = new Player(0, 0, 0, 0, null, null);
+				Player player = new Player(0, 0, 0, 0, null, null, null);
 				Location[][][] map = new Location[25][25][25];
 				account.setPlayer(player);
 				account.setMap(map);

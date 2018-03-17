@@ -2,8 +2,6 @@
 package edu.ycp.cs320.IslandAdventure.servlet;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.ycp.cs320.IslandAdventure.controller.ActionController;
 import edu.ycp.cs320.IslandAdventure.controller.InventoryController;
+import edu.ycp.cs320.IslandAdventure.controller.PlayerController;
 import edu.ycp.cs320.IslandAdventure.model.Inventory;
+import edu.ycp.cs320.IslandAdventure.model.Player;
 
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,8 +37,10 @@ public class IndexServlet extends HttpServlet {
 		// create Inventory model - model does not persist between requests
 		// must recreate it each time a Post comes in 
 		String action = "";
-		Inventory inventoryModel = new Inventory(null);
-		InventoryController inventoryController = new InventoryController(null);
+		PlayerController playerController = new PlayerController();
+		Player player = playerController.createNewPlayer();
+		Inventory inventoryModel = new Inventory(player.getInventory().getInventoryMap());
+		InventoryController inventoryController = new InventoryController(player.getInventory().getInventoryMap());
 		ActionController controller = new ActionController();
 
 		
