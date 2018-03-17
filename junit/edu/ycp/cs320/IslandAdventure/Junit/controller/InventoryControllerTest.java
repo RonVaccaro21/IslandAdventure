@@ -13,20 +13,20 @@ import edu.ycp.cs320.IslandAdventure.model.Inventory;
 
 public class InventoryControllerTest 
 {
-	private InventoryController inventoryController = new InventoryController(null);
 	private Inventory inventory;
+	private InventoryController inventoryController; 
 	
 	@Before
 	public void setUp()
 	{
 		Map<String, Integer> inventoryMap = new HashMap<String, Integer>();
 		inventory = new Inventory(inventoryMap);
+		inventoryController = new InventoryController(inventory);
 	}
 		
 	@Test
 	public void testCreateNewInventory() 
 	{
-		Inventory inventory2 = inventoryController.createNewInventory();
-		assertTrue(inventory2.equals(inventory));
+		assertTrue(inventoryController.createNewInventory().getInventoryMap().equals(inventory.getInventoryMap()));
 	}
 }

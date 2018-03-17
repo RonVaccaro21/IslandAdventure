@@ -40,8 +40,8 @@ public class IndexServlet extends HttpServlet {
 		PlayerController playerController = new PlayerController();
 		Player player = playerController.createNewPlayer();
 		Inventory inventoryModel = new Inventory(player.getInventory().getInventoryMap());
-		InventoryController inventoryController = new InventoryController(player.getInventory().getInventoryMap());
-		ActionController controller = new ActionController();
+		InventoryController inventoryController = new InventoryController(player.getInventory());
+		ActionController controller = new ActionController(player);
 
 		
 		// assign model reference to controller so that controller can access model
@@ -58,6 +58,8 @@ public class IndexServlet extends HttpServlet {
 		req.setAttribute("lastAction", action);
 		
 		controller.interpretAction(action);
+		
+		req.setAttribute("woodCount", player.getInventory().getWoodCount());
 		
 		// Forward to view to render the result HTML document
 		req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
