@@ -22,6 +22,9 @@ public class SkillsControllerTest
 	@Test
 	public void testCreateNewSkills() 
 	{
-		assertTrue(skillsController.createNewSkills().equals(skills));
+		assertTrue(skillsController.createNewSkills().getCombatXP() == skills.getCombatXP());
+		assertTrue(skillsController.createNewSkills().getFishingXP() == skills.getFishingXP());
+		assertTrue(skillsController.createNewSkills().getWoodCuttingXP() == skills.getWoodCuttingXP());
+		assertTrue(skillsController.createNewSkills().getCraftingXP() == skills.getCraftingXP());
 	}
 }
