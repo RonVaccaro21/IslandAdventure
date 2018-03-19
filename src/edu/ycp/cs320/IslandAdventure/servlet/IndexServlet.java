@@ -21,7 +21,8 @@ public class IndexServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+			throws ServletException, IOException 
+	{
 		
 		System.out.println("Index Servlet: doGet");
 
@@ -30,7 +31,8 @@ public class IndexServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+			throws ServletException, IOException 
+	{
 		
 		System.out.println("Index Servlet: doPost");
 		
@@ -39,6 +41,7 @@ public class IndexServlet extends HttpServlet {
 		String action = "";
 		PlayerController playerController = new PlayerController();
 		Player player = playerController.createNewPlayer();
+
 		Inventory inventoryModel = new Inventory(player.getInventory().getInventoryMap());
 		InventoryController inventoryController = new InventoryController(player.getInventory());
 		ActionController controller = new ActionController(player);
@@ -47,7 +50,6 @@ public class IndexServlet extends HttpServlet {
 		// assign model reference to controller so that controller can access model
 		inventoryController.setModel(inventoryModel);
 
-	    
 		// Initialize variables in the Inventory model		
 		req.setAttribute("inventory", inventoryModel);
 		
@@ -61,13 +63,11 @@ public class IndexServlet extends HttpServlet {
 		
 		req.setAttribute("woodCount", player.getInventory().getWoodCount());
 		
+		req.setAttribute("locationX", player.getLocation().getX());
+		req.setAttribute("locationY", player.getLocation().getY());
+		req.setAttribute("locationZ", player.getLocation().getZ());
+		
 		// Forward to view to render the result HTML document
 		req.getRequestDispatcher("/_view/index.jsp").forward(req, resp);
 	}
-	
-	/*
-	public String getAction() {
-		return action;
-	}
-	*/
 }
