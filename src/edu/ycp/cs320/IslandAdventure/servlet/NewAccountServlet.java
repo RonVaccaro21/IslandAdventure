@@ -7,11 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import edu.ycp.cs320.IslandAdventure.controller.ActionController;
-import edu.ycp.cs320.IslandAdventure.controller.InventoryController;
-import edu.ycp.cs320.IslandAdventure.model.Inventory;
 import edu.ycp.cs320.IslandAdventure.model.*;
-import edu.ycp.cs320.IslandAdventure.controller.*;
 
 public class NewAccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -85,34 +81,5 @@ public class NewAccountServlet extends HttpServlet {
 			System.out.println("Error: " + errorMessage);
 			req.getRequestDispatcher("/_view/newAccount.jsp").forward(req, resp); //Go to this page
 		}
-		
-		
-		/* THIS IS JUST COPIED FROM INDEXSERVLET
-		// create Inventory model - model does not persist between requests
-		// must recreate it each time a Post comes in 
-		Inventory inventoryModel = new Inventory();
-		
-		InventoryController inventoryController = new InventoryController();
-		
-		// assign model reference to controller so that controller can access model
-		inventoryController.setModel(inventoryModel);
-		
-		// Initialize variables in the Inventory model
-		inventoryController.createGame();
-		
-		req.setAttribute("inventory", inventoryModel);
-		
-		req.setAttribute("action", req.getParameter("action"));
-		
-		String action = req.getParameter("action");
-	
-		req.setAttribute("lastAction", action);
-		
-		ActionController controller = new ActionController();
-		controller.interpretAction(action);
-		
-		// Forward to view to render the result HTML document
-		req.getRequestDispatcher("/_view/newAccount.jsp").forward(req, resp);
-		*/
 	}
 }

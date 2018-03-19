@@ -35,8 +35,7 @@ public class PlayerControllerTest
 	@Test
 	public void testCreateNewPlayer() 
 	{
-		Player player2 = playerController.createNewPlayer();
-		assertTrue(player2.equals(player));
+		assertTrue(playerController.createNewPlayer().getClass().equals(player.getClass()));
 	}
 
 }

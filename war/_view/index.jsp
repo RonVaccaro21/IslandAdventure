@@ -21,6 +21,7 @@
 		
 		<div id= "variablesBox">
 			Score: <br />
+			Location Coordinates: [${locationX}, ${locationY}, ${locationZ}] <br />
 			Inventory:
 			<ul>
 				<li>Wood: ${woodCount}</li>
